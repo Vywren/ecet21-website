@@ -2,32 +2,84 @@
 <html> 
 <head> 
 <title> Labs </title>
+<style>
+  body {
+    background-color:white;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #38444d;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
 </head>
 <body> 
 <h1> Labs </h1>
-<nav>
 
-    <div class="heading">
-
-      <h4>Navigation Bar</h4>
-
+<ul>
+  <li><a class="active" href="sample_website.html">Home</a></li>
+  <li><a href="learning_modules.html">Learning modules</a></li>
+  <li class = "dropdown">
+    <a href="labs.html" class="dropbtn">Labs</a>
+    <div class="dropdown-content">
+      <a href = "#l1">getting set up with connected components workshop</a>
+      <a href = "#l2">what does it all mean?</a>
+      <a href = "#l3">running your first program from connected components workshop</a>
+      <a href = "#l4">setting up motors</a>
     </div>
-<ul class="nav-links">
+  </li>
+</ul>
 
-    <li><a class="active" href="sample_website.html">Home</a></li>
 
-    <li><a href="learning_modules.html">Learning modules</a></li>
-
-    <li><a href="labs.html">Labs</a></li>
-  </ul>
-</nav>
-<h4>Table of contents</h4>
-<ol>
-    <a href = "#l1"><li>getting set up with connected components workshop</li></a>
-    <a href = "#l2"><li>what does it all mean?</li></a>
-    <a href = "#l3"><li>running your first program from connected components workshop</li></a>
-    <a href = "#l4"><li>setting up motors</li></a>
-</ol>
+    
 <a id = "l1"><h4>getting set up with connected components workshop</h4></a>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u31qwQUeGuM?si=wFl48zKTKziNugc7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo commodi magni necessitatibus, doloribus exercitationem sint voluptatum! Voluptatibus eaque aspernatur a, pariatur perferendis quisquam eum, reiciendis debitis unde qui necessitatibus! Reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ab libero soluta dicta quaerat eligendi corporis reprehenderit ducimus, non rem. Dolor fuga cum expedita accusamus deserunt, id nemo modi dolores. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem recusandae error minima, repudiandae, similique in, ducimus esse dolor laboriosam quaerat illum ea magnam. Iusto iste velit voluptatibus recusandae in saepe? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam id blanditiis nulla quae aliquam, debitis sequi perspiciatis libero magni ratione officia minima quidem repudiandae, esse quos praesentium fugiat, molestias reprehenderit.</p>
