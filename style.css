@@ -35,14 +35,15 @@ body {
   .mDrop {
     position: relative;
     top: 13.6rem;
+    width: auto
   }
   
   li .mDrop {
     visibility: hidden;
     opacity: 0;
-    width: 8rem;
+    width: auto;
     position: absolute;
-    top: 40px;
+    top: 36px;
     transition: all 0.5s ease;
     margin-top: 1.5rem;
     display: none;
