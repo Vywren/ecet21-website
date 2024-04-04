@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #000e2f;
   }
   
   li {
@@ -51,7 +51,7 @@ body {
   
   li a:hover,
   .mDrop:hover .li:hover {
-    background-color: green;
+    background-color: #E4002B;
   }
   
   li:hover > ul,
@@ -68,5 +68,5 @@ body {
   }
   
   .active {
-    background-color: #4caf50;
+    background-color: #7C878E;
   }
