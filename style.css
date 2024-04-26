@@ -72,3 +72,15 @@ body {
   .active {
     background-color: #7C878E;
   }
+
+  .reset-style, .reset-style * {
+    all: revert;
+}
+
+
+
+
+
+
+
+
