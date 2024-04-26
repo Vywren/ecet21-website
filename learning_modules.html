@@ -1,46 +1,154 @@
 <!DOCTYPE html>
-<html> 
-<head> 
-<title> Learning modules </title>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Learning modules </title>
+  <link rel="stylesheet" href="style.css">
+
 </head>
-<body> 
-<h1> Learning Modules </h1>
-<nav>
 
-    <div class="heading">
+<body>
+  <h1> Learning Modules </h1>
+  <div class="header">
+  </div>
+  <nav class="navbar">
+    <ul>
+      <li><a class="active" href="sample_website.html">Home</a></li>
+      <li><a href="learning_modules.html">Learning Modules</a>
+        <ul class="mDrop">
+          <a href="learning_modules.html #l1">Drives and Controllers</a>
+          <a href="learning_modules.html #l2">Servo Motors</a>
+          <a href="learning_modules.html #l3">Induction Motors</a>
+          <a href="learning_modules.html #l4">Stepper Motors</a>
+          <a href="learning_modules.html #l5">Connect Components Workbench</a>
+          <a href="learning_modules.html #l6">Safety</a>
+        </ul>
+      </li>
+      <li><a href="labs.html">Labs</a>
+        <ul class="mDrop">
+          <a href="lab0.html">Getting set up with Connected Components Workbench</a>
+          <a href="lab1.html">Servo motor</a>
+          <a href="lab2.html">Stepper motor</a>
+          <a href="lab3.html">Induction motor</a>
+        </ul>
+      </li>
+      <li>
+        <a href="resources.html">Resources</a>
+      </li>
+      <li style="float:right"><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
 
-      <h4>Navigation Bar</h4>
 
-    </div>
-<ul class="nav-links">
+  <a id="l1">
+    <h4>Importance of Drives and Controllers</h4>
+  </a>
 
-    <li><a class="active" href="sample_website.html">Home</a></li>
+  <p>When it comes to powering a motor, there are more steps involved than just directly connecting the motor to a power
+    supply. In our physical motor demonstration, you will see that each of the three motors has a motor driver to
+    accompany it. The purpose of the motor drive is to regulate the amount of power going into each motor. By doing so,
+    we can then directly control the speed of each of our motors. Without the driver, a motor would just operate
+    continuously based on the amount of power coming from its power supply. </p>
+  <p> A motor driver only handles managing the power going into a motor, whereas a motor controller can manage multiple
+    aspects of the motor. These aspects can include starting and stopping, rotation, speed, torque, and even protection
+    against circuit faults. These aspects of control will vary depending on the type of motor and controller you are
+    using. In our physical setup, it includes both the use of motor drives and a motor controller. For more information
+    on either motor drivers or motor controllers, refer to the links below: </p>
 
-    <li><a href="learning_modules.html">Learning modules</a></li>
-
-    <li><a href="labs.html">Labs</a></li>
-  </ul>
-</nav>
-<h4>Table of contents</h4>
-<ol>
-    <a href = "#l1"><li>what is a motor?</li></a>
-    <a href = "#l2"><li>what is a drive?</li></a>
-    <a href = "#l3"><li>intro to connected components workshop</li></a>
-    <a href = "#l4"><li>parts suitable to my needs</li></a>
-</ol>
-<a id = "l1"><h4>what is a motor?</h4></a>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u31qwQUeGuM?si=wFl48zKTKziNugc7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo commodi magni necessitatibus, doloribus exercitationem sint voluptatum! Voluptatibus eaque aspernatur a, pariatur perferendis quisquam eum, reiciendis debitis unde qui necessitatibus! Reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ab libero soluta dicta quaerat eligendi corporis reprehenderit ducimus, non rem. Dolor fuga cum expedita accusamus deserunt, id nemo modi dolores. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem recusandae error minima, repudiandae, similique in, ducimus esse dolor laboriosam quaerat illum ea magnam. Iusto iste velit voluptatibus recusandae in saepe? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam id blanditiis nulla quae aliquam, debitis sequi perspiciatis libero magni ratione officia minima quidem repudiandae, esse quos praesentium fugiat, molestias reprehenderit.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u31qwQUeGuM?si=wFl48zKTKziNugc7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<a id = "l2"></a><h4>what is a drive?</h4>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo commodi magni necessitatibus, doloribus exercitationem sint voluptatum! Voluptatibus eaque aspernatur a, pariatur perferendis quisquam eum, reiciendis debitis unde qui necessitatibus! Reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ab libero soluta dicta quaerat eligendi corporis reprehenderit ducimus, non rem. Dolor fuga cum expedita accusamus deserunt, id nemo modi dolores. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem recusandae error minima, repudiandae, similique in, ducimus esse dolor laboriosam quaerat illum ea magnam. Iusto iste velit voluptatibus recusandae in saepe? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam id blanditiis nulla quae aliquam, debitis sequi perspiciatis libero magni ratione officia minima quidem repudiandae, esse quos praesentium fugiat, molestias reprehenderit.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u31qwQUeGuM?si=wFl48zKTKziNugc7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<a id = "l3"><h4>intro to connected components workshop</h4></a>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo commodi magni necessitatibus, doloribus exercitationem sint voluptatum! Voluptatibus eaque aspernatur a, pariatur perferendis quisquam eum, reiciendis debitis unde qui necessitatibus! Reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ab libero soluta dicta quaerat eligendi corporis reprehenderit ducimus, non rem. Dolor fuga cum expedita accusamus deserunt, id nemo modi dolores. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem recusandae error minima, repudiandae, similique in, ducimus esse dolor laboriosam quaerat illum ea magnam. Iusto iste velit voluptatibus recusandae in saepe? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam id blanditiis nulla quae aliquam, debitis sequi perspiciatis libero magni ratione officia minima quidem repudiandae, esse quos praesentium fugiat, molestias reprehenderit.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u31qwQUeGuM?si=wFl48zKTKziNugc7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<a id = "l4"><h4>parts suitable to my needs</h4></a>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo commodi magni necessitatibus, doloribus exercitationem sint voluptatum! Voluptatibus eaque aspernatur a, pariatur perferendis quisquam eum, reiciendis debitis unde qui necessitatibus! Reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ab libero soluta dicta quaerat eligendi corporis reprehenderit ducimus, non rem. Dolor fuga cum expedita accusamus deserunt, id nemo modi dolores. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem recusandae error minima, repudiandae, similique in, ducimus esse dolor laboriosam quaerat illum ea magnam. Iusto iste velit voluptatibus recusandae in saepe? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam id blanditiis nulla quae aliquam, debitis sequi perspiciatis libero magni ratione officia minima quidem repudiandae, esse quos praesentium fugiat, molestias reprehenderit.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/u31qwQUeGuM?si=wFl48zKTKziNugc7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+  <a id="l2"></a>
+  <h4>Servo motors</h4>
+  <p>A servo motor operates by using a radially magnetized rotor to achieve precision control. They operate using a
+    stator, field windings that produce a magnetic field, and a rotating rotor. Servo motors can be either AC or DC,
+    where AC servo motors are more suited to higher currents and DC motors are more suited for smaller applications.
+    There are three common types of servo motors, positional rotation, continuous rotation, and linear. A positional
+    rotation servo motor can only rotate between 180 degrees, limiting its range of motion. A continuous rotation servo
+    contains no limit on its range of motion, allowing the motor to freely rotate clockwise or counterclockwise. A
+    linear motion servo motor converts rotational motion into linear motion through the use of a rack and pinion
+    mechanism to change its output. Typically, servo motors will have some sort of sensor, like an encoder, to give
+    feedback to its controller about the shaft’s output. The use of a sensor minimizes the error the motor can have.
+  </p>
+  <p> Servo motors are used in applications that require high-precision operation at high speeds. Common features in
+    servo motors include angular position, acceleration, and velocity control, as well as having high-speed torque (they
+    offer good torque at high speeds). Some examples that include servo motors are CNC machines, packaging machines,
+    textile processing, and cameras. </p>
+    <img src = "servo diagram.png" alt = "This is an image of a Servo motor" title = "Servo Motor Diagram"> <br/>
+    <h6>Additional resources for servo motors</h6>
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1WnGv-DPexc?si=zZFVXrqK2FMelJ_l"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hg3TIFIxWCo?si=c9gVKJ4bxrHZRaoe"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <a id="l3">
+    <h4>Induction Motors</h4>
+  </a>
+  <p> AC induction motors operate under the basic principle of converting electric power into mechanical power. Through
+    the use of alternating current (AC), an induction motor is propelled by a rotating magnetic field. There are two
+    basic components in any induction motor, the rotor and the stator. The stator is the outer chamber that does not
+    move. It is a ring of electromagnets used to produce a rotating magnetic field. Inside the stator, the wire coils
+    form magnet poles. When alternating current flows through them, this creates the rotating magnet field. The rotor,
+    which also has electromagnets arranged around it, spins inside of the stator by being attracted to the produced
+    rotating magnetic field. Therefore, the magnetic field produced by the stator induces a magnetic field in the rotor.
+    The rotor is connected to the shaft, which is the external part of the motor we see. As the rotor spins, the shaft
+    spins and produces torque. </p>
+  <p>
+    These motors can be either single-phase (low electricity requirement) or three-phase (high electricity requirement).
+    They are typically used in applications where you need a constant rotation to power something. Some examples include
+    using induction motors to operate conveyors, fans, pumps, compressors, mixers, and drilling machines.
+  </p>
+  <img src = "induction motor diagram.png" alt = "This is an image of an induction motor" title = "Induction Motor Diagram"> <br/>
+  <h6>Additional resources for induction motors</h6>
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AQqyGNOP_3o?si=75AQa1n6Ue75VPjx"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AOC7uTnxmTI?si=8WFa8cEWHmm7qJ4M"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <a id="l4">
+    <h4>Stepper motors</h4>
+  </a>
+  <p>A stepper motor operates by rotating in steps that are at a fixed angle. The three components of a stepper motor
+    are the stator, the stator windings, and the rotor. The stator is the outermost portion of the motor that doesn’t
+    move. It’s connected to the stator windings, which are each wrapped in wire coils. Organizing the coils into certain
+    groups will create phases. For example, in the image provided, this is a stepper motor with six windings and has
+    three phases. Each of these phases will produce a different magnetic field when powered. When a certain phase is
+    active, the rotor will rotate to align itself with the magnetic field produced by that phase. As seen in the image,
+    the motor starts at phase A, then switches to phase B, and then phase C before it repeats which phase it switches
+    to. Each rotation is one step. By switching between each phase in a sequential order, the rotor can rotate in as
+    many steps as desired.</p>
+  <p>Due to a stepper motor rotating in fixed steps, it can have very precise movements. This is why stepper motors are
+    used in applications that require high-precision motion control. Common features in stepper motors include
+    positioning control, speed control, and low-speed torque (they offer good torque at low speeds). Some examples that
+    include stepper motors are robotics, 3-D printing, packing, and automation equipment. </p>
+    <img src = "stepper diagram.png" alt = "This is an image of how a Stepper motor works" title = "Stepper Motor concept Diagram"> <br/>
+    <h6>Additional resources for stepper motors</h6>
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eyqwLiowZiU?si=qNpx2j2WR4lT_yKR"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/09Mpkjcr0bo?si=GcWcJOcUk-1m7XPr"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tld8EjwUUMg?si=I1mZYEtHK-FZTrv9"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <a id="l5">
+    <h4>Connected Components Workshop</h4>
+  </a>
+  <p>Connected Components Workbench (CCW) is a free-to-use software provided by Rockwell Automation. This program allows us to connect to each of our motor drives and Micro820 Programmable Logic Controller via ethernet. Within CCW, we can configure and change the parameters of any of our devices. The Micro820 can operate any of the motor drives based on programs created in CCW. These programs operate on ladder logic, which represents the program visually to show the relay logic hardware needed to operate PLCs. Ladder logic can be confusing so to make these programs easier to use, we can use user-defined function blocks (UDFBs). UDFBs are preprogrammed blocks that take in certain preset inputs and return a user’s desired outputs. UDFBs take the ladder logic needed to run these drives and give us easy-to-digest blocks for anyone to use to operate the drives. When following along with our experiments for the motors, all steps done in CCW are thoroughly explained to ensure anyone can understand what they are doing in CCW at a given instance. </p>
+  <a id="l6">
+    <h4>Safety</h4>
+  </a>
+  <p>When operating our motor training system, there are important safety considerations to be aware of. All the drives, the PLC, the power supplies, and the wirings are featured within a cabinet. When completing our experiments, there is no need to open this cabinet. Everything needed to run the experiments is featured on the outside of the cabinet. This cabinet serves to protect the equipment running the motors but has a viewing window for you to see what’s going on inside of it. Whenever operating any of the motors, make sure to keep a good distance from them. Keep any long sleeves, long hair, and fingers out of the way of the motor’s rotor when it's spinning. If for any reason you need to access the inside of the cabinet, only open the cabinet when the equipment is powered off. Before powering down any of the equipment, make sure to disconnect the equipment from the Connected Components Workbench software.</p>
 </body>
+
 </html>
