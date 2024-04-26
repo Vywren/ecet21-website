@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Induction motor</title>
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-  <h1> sample_lab </h1>
+  <h1> Induction motor </h1>
   <div class="header">
   </div>
   <nav class="navbar">
@@ -25,10 +25,10 @@
           </li>
           <li><a href="labs.html">Labs</a>
               <ul class="mDrop">
-                  <a href="lab0.html">getting set up with connected components workshop</a>
-                  <a href="lab1.html">what does it all mean?</a>
-                  <a href="lab2.html">running your first program from connected components workshop</a>
-                  <a href="lab3.html">setting up motors</a>
+                <a href="lab0.html">Getting set up with Connected Components Workbench</a>
+                <a href="lab1.html">Servo motor</a>
+                <a href="lab2.html">Stepper motor</a>
+                <a href="lab3.html">Induction motor</a>
               </ul>
           </li>
           <li>
@@ -37,5 +37,33 @@
           <li style="float:right"><a href="help.html">Help</a></li>
       </ul>
   </nav>
+  <h3> Introduction </h3>
+  <p> In this experiment, you will be able to control and operate an AC induction motor. You will also learn how the frequency of an induction motor affects the speed and voltage of the motor. The software you will be using is called Connected Components Workbench (CCW) and allows you to operate the motor using a PowerFlex 525 Adjustable Frequency AC drive and a Micro820 Programmable Logic Controller (PLC). The Micro820 PLC is used to control the PowerFlex 525 drive and the drive is used to control and supply power to the motor. This experiment also makes use of user-defined function blocks (UDFB) which are pre-programmed blocks that will allow you to send commands to the Micro820 PLC. These commands then change how the PowerFlex 525 is operating and in turn, control the induction motor. All instructions needed to operate CCW are provided in this experiment.  </p>
+  <h3> Procedure </h3>
+  <ol>
+    <li><p> If not already open, start the Connected Components Workbench (CCW) program and open the SeniorDesign.ccwslm file under the recent projects. </p></li>
+    <li><p>First, we need to establish a connection to the Micro820 PLC and PowerFlex 525. Ensure your computer is connected via ethernet to the physical system and that the physical system is powered on. On the left-hand side, under the Project Organizer, double-click on the Micro820 option. This will open a page full of all of our Micro820 configuration options. In the top right corner, hit the connect button, as shown below. The device is connected when you see the connect option replaced with a disconnect option. 
+    </p></li>
+    <img src = "induction1.png" alt = "Image of download page" title = "Download Page" width="560" height="315"> <br/>
+    <li><p>Next, double-click on the PowerFlex 525_1 option under the Project Organizer. This will bring up the page with all of our PowerFlex 525 configuration options. In the top right corner, once again click the connect option, and from the drop-down hit connect, as shown below. You should see a green bar appear on this page once the device is connected. </p></li>
+    <img src = "induction2.png" alt = "Image of download page" title = "Download Page" width="560" height="315"> <br/>
+    <li><p>Once the Micro820 and PowerFlex 525 are both connected, you should also see a little green mark next to both of their names in the Project Organizer. If you do not see this, go back through the previous steps to make sure the program is connected to both devices. </p></li>
+    <img src = "induction3.png" alt = "Image of download page" title = "Download Page" width="560" height="315"> <br/>
+    <li><p>Next, in the Project Organizer, double-click on the option titled Induction_Motor_UDFB. This will open our user-defined function block (UDFB) that will operate the PowerFlex drive and control our induction motor. We need to configure three parameters before we can enable the function block.</p></li>
+    <li><p>The first parameter is the IP address. Double-click on the box labeled PF_IP_ADDRESS. This will open the Variable Monitoring page, which allows us to change different values going into the function block. We want to change the IP address of our function block to match the IP address of our PowerFlex drive. Under Logical Value, set the value of PF_IP_ADDRESS to 192.168.1.3 and hit enter to save the value. Once done so, you can close out of the Variable Monitoring page. You should see the value we just set displayed on our function block. </p></li>
+    <li><p>The next two parameters to be set up are the update rate (PF_UPDATE_RATE) which controls how often the program updates to the drive and the control timeout (PF_ENET_CTRL) which is how long the drive can not communicate before the program says the drive is not communicating. Repeating the same steps as configuring the IP address, set the value for the update rate to be 1000 and the value of the control timeout to be 2. Now with these values configured, your function block should look like the image below. </p></li>
+    <img src = "induction4.png" alt = "Image of download page" title = "Download Page" width="560" height="750"> <br/>
+    <li><p>With those parameters set, we need to enable the function block. To the left of the function block, right-click on the option labeled PF_ENABLE_UDFB and select Toggle Boolean Value. You should see the top line that runs through the function block switch from blue to green, the green indicating our function block is enabled. Also, notice the block labeled PF_FB_ERROR. This block tells us if there is any error within our function block and should be displayed as false. If not, double-check check you sent the correct values in the previous steps. </p></li>
+    <img src = "induction5.png" alt = "Image of download page" title = "Download Page" width="560" height="500"> <br/>
+    <img src = "induction6.png" alt = "Image of download page" title = "Download Page" width="560" height="315"> <br/>
+    <li><p>Now, we are going to set our speed reference. This controls the frequency in Hertz (Hz) that will be going to our motor. Double-click on the option labeled PF_SPEED_REF and set this value to 20. This is the equivalent of 20 Hz. </p></li>
+    <li><p> It is now time to start the drive and begin powering the motor with it. Right-click on the box labeled PF_START and select Toggle Boolean Value. This should switch the value from False to True and the motor should begin to spin. You can change the speed reference to be any value you want between 0 and 30 Hz. What do you notice about the speed of the motor when you change this value? You can also look on the right side of the function block and see the voltage the drive is outputting to the motor. How does output voltage change when you increase the speed reference? How about the output current?</p></li>
+    <li><p>Once you are done with the motor and are ready to turn it off, right-click on the PF_START and toggle the boolean value to set it to false. Do the same with the value PF_STOP and set that value to true. The motor should slowly come to a stop. Once you hear the drive shut off, you can toggle the PF_ENABLE_UDFB option to disable the function block. If you are done, disconnect the Micro820 and PowerFlex under their respective pages (where you initially connected them using their connect buttons). </p></li>
+  </ol>
+  
+  <h3> Intended Results</h3>
+  <p>Frequency plays an important role in the operation of AC induction motors. You should have seen that by changing our speed reference, which is the frequency going into the motor, we can change how fast the motor operates. That is because the synchronous speed of an induction motor is directly affected by the frequency. They are related by the equation, N=120*fp, where N is the synchronous speed, f is the frequency, and p is the number of poles in the motor (the motor you used has 2 poles). Therefore, as we increase the frequency, the motor spins faster and if we decrease the frequency, the motor spins slower. In addition, you should have seen this same effect with the output voltage. This is because frequency and voltage are proportionally related in an induction motor. So the output voltage increased when the frequency was increased and the opposite when decreased to supply enough voltage to the motor. This is the opposite with the output current. Current and voltage are inversely related to each other, so if we see the output voltage increase, the output current will decrease, as you should have seen. </p>
+  <h3> Summary </h3>
+  <p>	In summary, you learned how to operate and control an induction motor using the CCW software. You got to see how a Micro820 PLC and PowerFlex 525 drive can be used together to power an induction motor through the use of UDFBs. You also learned the importance the frequency has on an induction motor. You learned that frequency is not only responsible for the synchronous speed of the motor but it also changes the amount of voltage the motor uses. Finally, you got to physically see how the speed of the motor changes when the frequency changes.</p>
 </body>
 </html>
